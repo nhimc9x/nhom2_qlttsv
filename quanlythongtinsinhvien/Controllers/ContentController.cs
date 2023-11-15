@@ -6,6 +6,7 @@ namespace quanlythongtinsinhvien.Controllers
 {
     public class ContentController : Controller
     {
+        QuanlysinhvienContext db_students = new QuanlysinhvienContext();
         private readonly ILogger<ContentController> _logger;
 
         public ContentController(ILogger<ContentController> logger)
@@ -15,7 +16,8 @@ namespace quanlythongtinsinhvien.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var listSudents = db_students.Students.ToList();
+            return View(listSudents);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
