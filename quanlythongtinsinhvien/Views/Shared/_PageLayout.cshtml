@@ -6,39 +6,20 @@
     <title>@ViewData["Title"] - quanlythongtinsinhvien</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="~/quanlythongtinsinhvien.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dataTables.bootstrap4.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Haha</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Content">Test</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Content" asp-action="Index">Test2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Test2</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex gap-4 flex-wrap justify-content-center">
+            <a href="/" class="mx-auto d-flex align-items-center mb-3 mb-lg-0 me-lg-auto gap-3 link-body-emphasis text-decoration-none">
+                <i style="font-size: 32px" class="fa-solid fa-graduation-cap"></i>
+                <span class="fs-2">Quản lý sinh viên</span>
+            </a>
+        </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -47,12 +28,21 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - quanlythongtinsinhvien - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Nhóm 2 - QuanLySinhVien - <a asp-area="" asp-page="/Admin/Index">Admin</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/data-table.js"></script>
+
+    
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
