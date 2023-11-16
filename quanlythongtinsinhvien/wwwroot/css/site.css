@@ -16,3 +16,32 @@ html {
 body {
   margin-bottom: 60px;
 }
+.ct-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+header.default-layout {
+    background: #bdc3c7;
+    padding: 8px 24px;
+}
+.default-layout nav a {
+    transition: all 0.3s ease-in-out;
+}
+.default-layout nav a:hover {
+    background: #0d6efd;
+    color: white;
+}
+main {
+    background: #ecf0f1;
+    padding: 40px 0;
+}
+.text-asbe {
+    color: #7f8c8d;
+}
+.ct-content {
+    padding: 16px 8px;
+}
+.ad-tbody tr td {
+    line-height: 38px;
+}

@@ -3,25 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - quanlythongtinsinhvien</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="~/quanlythongtinsinhvien.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/dataTables.bootstrap4.css" asp-append-version="true" />
 </head>
-<body>
-    <header class="py-3 mb-4 border-bottom">
+<body class="ct-container">
+    <header class="py-3 mb-2 border-bottom">
         <div class="container d-flex gap-4 flex-wrap justify-content-center">
-            <a href="/" class="mx-auto d-flex align-items-center mb-3 mb-lg-0 me-lg-auto gap-3 link-body-emphasis text-decoration-none">
-                <i style="font-size: 32px" class="fa-solid fa-graduation-cap"></i>
-                <span class="fs-2">Quản lý sinh viên</span>
-            </a>
+            <div class="mx-auto d-flex align-items-center mb-3 mb-lg-0 me-lg-auto gap-3">
+                <i style="font-size: 32px" class="fa-solid fa-graduation-cap text-asbe"></i>
+                <span class="fs-2">@ViewData["Title"]</span>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="ct-content">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-chevron px-3 py-0 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis text-asbe" href="/">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span class="visually-hidden">Home</span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="link-body-emphasis fw-semibold text-decoration-none" href="">@ViewData["Title"]</a>
+                </li>
+            </ol>
+        </nav>
+        <main role="main" class="py-4">
             @RenderBody()
         </main>
     </div>
@@ -37,7 +50,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     <script src="~/js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/jqueryMain.js"></script>
     <script src="~/js/dataTables.bootstrap4.min.js"></script>
     <script src="~/js/data-table.js"></script>
 

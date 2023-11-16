@@ -39,9 +39,6 @@ public partial class QuanlysinhvienContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("ghichu");
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("id");
             entity.Property(e => e.Ngaysinh)
                 .HasMaxLength(20)
                 .IsUnicode(false)
