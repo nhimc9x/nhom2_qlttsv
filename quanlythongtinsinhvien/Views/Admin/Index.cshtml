@@ -4,6 +4,7 @@
 }
 @model List<Student>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 <div class="px-5 py-2">
     <div class="card">
         <h4 class="card-header">Thông tin sinh viên</h4>
@@ -36,11 +37,9 @@
                                 <td class="d-flex justify-content-center gap-3">
                                     <a class="btn btn-warning" title="Sửa" asp-action="Suathongtin" asp-route-masv="@item.Masv">
                                         <i class="fa-regular fa-pen-to-square"></i>
-                                        <span></span>
                                     </a>
                                     <a class="btn btn-danger" title="Xóa" asp-action="Xoathongtin" asp-route-masv="@item.Masv">
                                         <i class="fa-regular fa-trash-can"></i>
-                                        <span></span>
                                     </a>
                                 </td>
                             </tr>

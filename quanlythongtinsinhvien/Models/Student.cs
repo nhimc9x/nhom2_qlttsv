@@ -7,11 +7,10 @@ namespace quanlythongtinsinhvien.Models;
 public partial class Student
 {
     [Required(ErrorMessage = "Thiếu mã sinh viên")]
-    [StringLength(20, MinimumLength = 3, ErrorMessage = "Chiều dài không chính xác")]
     [Display(Name = "Mã sinh viên")]
     public string Masv { get; set; } = null!;
 
-    [Required(ErrorMessage = "Thiếu mã sinh viên")]
+    [Required(ErrorMessage = "Thiếu tên sinh viên")]
     [Display(Name = "Tên sinh viên")]
     public string Tensv { get; set; } = null!;
 

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="~/quanlythongtinsinhvien.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dataTables.bootstrap4.css" asp-append-version="true" />
+</head>
+<body>
+    <div style="width: 1000px; margin-top: 16vh;" class="ct-container">
+        <main role="main" class="rounded-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-chevron px-5 py-0 bg-body-tertiary rounded-3">
+                    <li class="breadcrumb-item">
+                        <a class="link-body-emphasis text-asbe" href="/">
+                            <i class="fa-solid fa-house-chimney"></i>
+                            <span class="visually-hidden">Home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="link-body-emphasis fw-semibold text-asbe text-decoration-none" asp-action="Index">Admin</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a class="link-body-emphasis fw-semibold text-decoration-none" href="">@ViewData["Title"]</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="py-4 px-5">
+                <div class="mb-4 d-flex justify-content-center align-items-end gap-4">
+                    <i class="fa-regular fa-address-card fs-2"></i>
+                    <h2 class="text-uppercase mb-0">@ViewData["Title"]</h2>
+                </div>
+                <h5 class="text-danger text-center mb-3">@TempData["Message"]</h5>
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+</body>
+</html>

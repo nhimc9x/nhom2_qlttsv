@@ -22,7 +22,6 @@ body {
     margin: 0 auto;
 }
 header.default-layout {
-    background: #bdc3c7;
     padding: 8px 24px;
 }
 .default-layout nav a {
@@ -44,4 +43,58 @@ main {
 }
 .ad-tbody tr td {
     line-height: 38px;
+}
+.box-form .row {
+    margin-bottom: 12px;
+}
+
+.ct-layout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(45, 52, 54, 0.5);
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.ct-modal {
+    width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: showModal ease-in-out .3s;
+}
+.ct-modal-text {
+    text-align: center;
+    padding: 28px;
+}
+.ct-modal-btn {
+    display: flex;
+    text-align: center;
+    border-top: 1px solid #dfe6e9;
+}
+.ct-modal-btn a {
+    flex-basis: 50%;
+    padding: 12px 0;
+    transition: linear .3s;
+    cursor: pointer;
+}
+    .ct-modal-btn a:hover {
+        background: #ecf0f1;
+    }
+.ct-modal-btn a:first-child {
+    border-right: 1px solid #dfe6e9;
+}
+@keyframes showModal {
+    from {
+        transform: scale(0.6);
+        opacity: .5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
