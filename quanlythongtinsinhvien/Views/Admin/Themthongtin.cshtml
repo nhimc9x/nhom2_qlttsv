@@ -3,61 +3,87 @@
 
 @{
     ViewData["Title"] = "Thêm thông tin sinh viên";
-    Layout = "_PageLayout";
+    Layout = "_FormLayout";
 }
 
-<h1>Themthongtin</h1>
-
-<h4>Student</h4>
-<hr />
-<h4>@TempData["Message"]</h4>
-<div class="row">
-    <div class="col-md-4">
+<div class="row box-form">
+    <div class="col-12">
         <form method="post" asp-action="Themthongtin">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Masv" class="control-label"></label>
-                <input asp-for="Masv" class="form-control" />
-                <span asp-validation-for="Masv" class="text-danger"></span>
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-address-card"></i>
+                        <label asp-for="Masv" class="control-label"></label>
+                        <span class="text-danger">(*)</span>
+                    </div>
+                    <input asp-for="Masv" class="form-control" />
+                    <span asp-validation-for="Masv" class="text-danger"></span>
+                </div>
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <label asp-for="Tensv" class="control-label"></label>
+                        <span class="text-danger">(*)</span>
+                        <span asp-validation-for="Tensv" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Tensv" class="form-control" />
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Tensv" class="control-label"></label>
-                <input asp-for="Tensv" class="form-control" />
-                <span asp-validation-for="Tensv" class="text-danger"></span>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <label asp-for="Gioitinh" class="control-label"></label>
+                        <span asp-validation-for="Gioitinh" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Gioitinh" class="form-control" />
+                </div>
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <label asp-for="Ngaysinh" class="control-label"></label>
+                        <span asp-validation-for="Ngaysinh" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Ngaysinh" class="form-control" />
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Gioitinh" class="control-label"></label>
-                <input asp-for="Gioitinh" class="form-control" />
-                <span asp-validation-for="Gioitinh" class="text-danger"></span>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <label asp-for="Quequan" class="control-label"></label>
+                        <span asp-validation-for="Quequan" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Quequan" class="form-control" />
+                </div>
+                <div class="form-group col-6">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        <label asp-for="Sodienthoai" class="control-label"></label>
+                        <span asp-validation-for="Sodienthoai" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Sodienthoai" class="form-control" />
+                </div>
             </div>
+
             <div class="form-group">
-                <label asp-for="Ngaysinh" class="control-label"></label>
-                <input asp-for="Ngaysinh" class="form-control" />
-                <span asp-validation-for="Ngaysinh" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quequan" class="control-label"></label>
-                <input asp-for="Quequan" class="form-control" />
-                <span asp-validation-for="Quequan" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Sodienthoai" class="control-label"></label>
-                <input asp-for="Sodienthoai" class="form-control" />
-                <span asp-validation-for="Sodienthoai" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ghichu" class="control-label"></label>
+                <div class="m-1 d-flex align-items-center gap-2">
+                    <i class="fa-regular fa-clipboard"></i>
+                    <label asp-for="Ghichu" class="control-label"></label>
+                    <span asp-validation-for="Ghichu" class="text-danger"></span>
+                </div>
                 <input asp-for="Ghichu" class="form-control" />
-                <span asp-validation-for="Ghichu" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="form-group text-center mt-3">
+                <input style="width: 140px;" type="submit" value="Thêm" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="text-end">
+    <a asp-action="Index">Trở về</a>
 </div>
 
