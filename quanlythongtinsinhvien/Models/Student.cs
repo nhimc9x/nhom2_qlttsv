@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace quanlythongtinsinhvien.Models;
 
 public partial class Student
 {
+
     [Required(ErrorMessage = "Thiếu mã sinh viên")]
     [Display(Name = "Mã sinh viên")]
     public string Masv { get; set; } = null!;

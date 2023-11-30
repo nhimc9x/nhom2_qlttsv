@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using quanlythongtinsinhvien.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 
 namespace quanlythongtinsinhvien.Controllers
@@ -47,7 +48,7 @@ namespace quanlythongtinsinhvien.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Themthongtin(Student student)
         {
-            TempData["Message"] = "";
+            TempData["Message"] = null;
             if (ModelState.IsValid)
             {
                 // Kiểm tra mã sinh viên có trùng hay không
@@ -77,15 +78,9 @@ namespace quanlythongtinsinhvien.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Suathongtin(Student student)
         {
-            TempData["Message"] = "";
+            TempData["Message"] = null;
             if (ModelState.IsValid)
             {
-                // Kiểm tra mã sinh viên có trùng hay không
-                if (IsMaSinhVienExists(student.Masv))
-                {
-                    TempData["Message"] = "Mã sinh viên đã tồn tại, vui lòng nhập mã khác!";
-                    return View(student); // Hiển thị trang với thông báo lỗi
-                }
                 db_students.Update(student);
                 db_students.SaveChanges();
                 return RedirectToAction("Index");
@@ -98,8 +93,10 @@ namespace quanlythongtinsinhvien.Controllers
         [HttpGet]
         public IActionResult Xoathongtin(string Masv)
         {
+            TempData["Message"] = null;
             db_students.Remove(db_students.Students.Find(Masv));
             db_students.SaveChanges();
+            TempData["Message"] = "Xóa sinh viên " + Masv +" thành công!";
             return RedirectToAction("Index");
         }
     }

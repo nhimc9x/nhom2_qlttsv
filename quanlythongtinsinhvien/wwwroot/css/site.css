@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
@@ -23,17 +24,25 @@ body {
 }
 header.default-layout {
     padding: 8px 24px;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255 255 255 / 75%);
+    backdrop-filter: blur(6px);
 }
 .default-layout nav a {
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .default-layout nav a:hover {
     background: #0d6efd;
-    color: white;
+    color: white !important;
+}
+.default-layout nav a.ct-active {
+    color: #198754;
 }
 main {
     background: #ecf0f1;
-    padding: 40px 0;
+    /*padding: 40px 0;*/
 }
 .text-asbe {
     color: #7f8c8d;
@@ -97,4 +106,61 @@ main {
         transform: scale(1);
         opacity: 1;
     }
+}
+.ct-header-wall {
+    background: url('../blue-pattern.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+    
+}
+.ct-avatar {
+    height: 120px;
+    width: 120px;
+    background: url('../avatar.jpg') no-repeat center top;
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(45, 52, 54, 0.2);
+    margin: 0 auto;
+}
+.ct-notyfi {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    gap: 16px;
+    z-index: 99;
+    animation: showNoty ease-in-out 4s forwards ;
+}
+
+@keyframes showNoty {
+    0%, 100% {
+        transform: translateX(-120%);
+        opacity: .5;
+    }
+
+    10%,90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#ct-contact-id .ic-ping:hover i {
+    animation: ICping linear .2s infinite;
+}
+@keyframes ICping {
+    from {
+        transform: rotate(15deg);
+    }
+
+    to {
+        transform: translateX(-15deg);
+    }
+}
+
+.ct-footer-wall {
+    margin-top: 60px;
+    background: url('../ftban.jpg') bottom center no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
 }

@@ -5,6 +5,18 @@
 @model List<Student>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class="ct-notyfi alert alert-success d-flex align-items-center" role="alert">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+                @TempData["Message"]
+            </div>
+        </div>
+    }
+}
+
 <div class="px-5 py-2">
     <div class="card">
         <h4 class="card-header">Thông tin sinh viên</h4>
@@ -48,6 +60,9 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div class="text-end mt-3">
+        <a href="/Content">Trang danh sách sinh viên</a>
     </div>
 </div>
 

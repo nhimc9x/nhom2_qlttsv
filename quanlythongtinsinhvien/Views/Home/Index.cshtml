@@ -1,31 +1,125 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://github.com/nhimc9x/nhom2_qlttsv">building Web apps with ASP.NET Core</a>.</p>
+    <div class="ct-header-wall d-flex flex-column justify-content-center">
+        <h3 style="text-shadow: 1px 2px 3px #dadada;" class="display-5 fw-bolder">Lập trình ASP.NET</h3>
+        <p style="text-shadow: 0px 0px 1px;" class="mt-4 px-4 display-6 fw-lighter">Hệ thống quản lý thông tin sinh viên</p>
+    </div>
 
-    <div class="b-example-divider"></div>
-    <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 text-start border-bottom">Các chức năng</h2>
+    <div id="ct-project-id" class="container px-4 pt-5 pb-2">
+        <h2 class="pb-2 text-start border-bottom border-dark">Project</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
             <div class="col d-flex align-items-start px-5 mt-3">
-                <div class="bg-white py-5 px-4 rounded-3">
-                    <i class="fa-solid fa-table fs-1 p-3 rounded-3 bg-secondary text-white mb-4"></i>
+                <div class="bg-white py-5 px-4 rounded-3 h-100">
+                    <i class="fa-solid fa-table fs-1 p-3 rounded-3 bg-success text-white mb-4"></i>
                     <h3 class="fs-2 text-body-emphasis">Danh sách sinh viên</h3>
-                    <p>Hiển thị bảng đầy đủ các thông tin của sinh viên kèm thêm chức năng tìm kiếm, sắp xếp, phân trang các thông tin.</p>
+                    <p class="my-3 px-4">Hiển thị bảng đầy đủ các thông tin của sinh viên kèm thêm chức năng tìm kiếm, sắp xếp, phân trang các thông tin.</p>
                     <a class="btn px-4 btn-primary" asp-area="" asp-controller="Content" asp-action="Index">Truy cập</a>
                 </div>
             </div>
             <div class="col d-flex align-items-start px-5 mt-lg-3 mt-5">
-                <div class="bg-white py-5 px-4 rounded-3">
-                    <i class="fa-solid fa-screwdriver-wrench fs-1 p-3 rounded-3 bg-secondary text-white mb-4"></i>
+                <div class="bg-white py-5 px-4 rounded-3 h-100">
+                    <i class="fa-solid fa-screwdriver-wrench fs-1 p-3 rounded-3 bg-warning text-white mb-4"></i>
                     <h3 class="fs-2 text-body-emphasis">Quản lý sinh viên</h3>
-                    <p>Trang quản lý các thông tin sinh viên gồm thêm mới thông tin, sửa thông tin và xóa thông tin.</p>
+                    <p class="my-3 px-4">Trang quản lý các thông tin sinh viên gồm thêm mới thông tin, sửa thông tin và xóa thông tin.</p>
                     <a class="btn px-4 btn-primary" asp-area="" asp-controller="Admin" asp-action="Index">Truy cập</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="ct-about-id" class="container px-4 pt-5 pb-2">
+        <h2 class="pb-2 text-start border-bottom border-dark">About</h2>
+        <h4 class="text-start m-4">Thành viên nhóm</h4>
+        <div class="row row-cols-lg-5 row-cols-3 g-4">
+
+            <div class="col-lg col-6 text-center">
+                <div class="ct-avatar">
+                </div>
+                <p class="fs-5 mt-2">Vũ Văn Nhị</p>
+            </div>
+
+            <div class="col-lg col-6 text-center">
+                <div class="ct-avatar">
+                </div>
+                <p class="fs-5 mt-2">Nguyễn Văn Cơ</p>
+            </div>
+
+            <div class="col text-center">
+                <div class="ct-avatar">
+                </div>
+                <p class="fs-5 mt-2">Bùi Minh Đức</p>
+            </div>
+
+            <div class="col text-center">
+                <div class="ct-avatar">
+                </div>
+                <p class="fs-5 mt-2">Võ Gia Huy</p>
+            </div>
+
+            <div class="col text-center">
+                <div class="ct-avatar">
+                </div>
+                <p class="fs-5 mt-2">Nguyễn Thành Đạt</p>
+            </div>
+
+        </div>
+        <h4 class="text-start m-4">Đề tài</h4>
+        <div class="text-start px-5">
+            <p class="fs-5">Tên đề tài: Quản lý thông tin sinh viên</p>
+            <p class="fs-5">Giáo viên hướng dẫn: Thầy Nguyễn Anh Thơ</p>
+            <p class="fs-5">Công nghệ sử dụng: ASP.Net MVC</p>
+            <p class="fs-5">Bài báo cáo: <a href="">tại đây</a> </p>
+            <p class="fs-5">Bài thuyết trình: <a href="">tại đây</a> </p>
+        </div>
+    </div>
+
+    <div id="ct-contact-id" class="container px-4 pt-5 pb-2">
+        <h2 class="pb-2 text-start border-bottom border-dark">Contact</h2>
+        <div class="row row-cols-lg-2 row-cols-1 g-4 p-3">
+            <div style="height: 360px" class="col col-lg-6 text-start py-2">
+                <p style="border-bottom: 2px solid #0077cc" class="fs-5 px-2 pb-1 mb-4 d-inline-block">Liên hệ với chúng tôi thông qua</p>
+                <div style="padding: 0 60px; max-width: 550px" class="row g-3 mx-auto">
+                    <div style="height: 72px; background: #0077cc" class="ic-ping col-12 text-white rounded-3 d-flex align-items-center gap-5 px-4">
+                        <div class="d-flex justify-content-center">
+                            <i class="fa-solid fa-phone fs-1"></i>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <a href="tel:+842343500222" class="fs-5 text-decoration-none text-white text-center">+84 234 350 0222</a>
+                        </div>
+                    </div>
+
+                    <div style="height: 72px; background: #0077cc" class="ic-ping col-12 text-white rounded-3 d-flex align-items-center gap-5 px-4">
+                        <div class="d-flex justify-content-center">
+                            <i class="fa-solid fa-envelope fs-1"></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="mailto: anhtv7703@gmail.com" target="_blank" class="fs-5 text-decoration-none text-white text-center">anhtv7703@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div style="height: 72px; background: #0077cc" class="ic-ping col-12 text-white rounded-3 d-flex align-items-center gap-5 px-4">
+                        <div class="d-flex justify-content-center">
+                            <i class="fa-solid fa-location-dot fs-1"></i>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="https://maps.app.goo.gl/YUUpERzVyKY3iZoG9" class="fs-5 text-decoration-none text-white text-center">106 Hoàng Quốc Việt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-6 overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232.72279291988733!2d105.7916159111912!3d21.050097086796043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf4a0456a03%3A0xa16b4e2f98499a65!2zVHLGsOG7nW5nIENhbyDEkOG6s25nIEPDtG5nIFRoxrDGoW5nIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1701362446961!5m2!1svi!2s"
+                        width="580" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="ct-footer-wall">
+
+    </div>
+
 </div>

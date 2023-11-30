@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - quanlythongtinsinhvien</title>
+    <title>@ViewData["Title"] - Quản lý thông tin sinh viên</title>
+    <link rel="icon" href="~/student-management-01.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -13,13 +14,16 @@
 <body class="text-center">
     <div class="ct-container d-flex w-100 h-100 mx-auto flex-column">
         <header class="default-layout masthead mb-auto">
-            <div class="inner d-flex justify-content-between flex-column flex-sm-row align-items-center">
-                <h3 class="masthead-brand">Nhóm 2</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Project</a>
-                    <a class="nav-link" href="#">About</a>
-                    <a class="nav-link" href="#">Contact</a>
+            <div class="inner d-flex justify-content-between flex-column gap-2 flex-sm-row gap-sm-0 align-items-center">
+                <a href="" class="masthead-brand fs-3 text-decoration-none fw-bold fst-italic text-success text-uppercase mb-0">
+                    <i class="fa-solid fa-users-rectangle me-1"></i>
+                    Nhóm 2
+                </a>
+                <nav class="nav nav-masthead justify-content-center text-uppercase fw-bolder">
+                    <a class="nav-link">Home</a>
+                    <a class="nav-link">Project</a>
+                    <a class="nav-link">About</a>
+                    <a class="nav-link">Contact</a>
                 </nav>
             </div>
         </header>
@@ -28,11 +32,44 @@
             @RenderBody()
         </main>
 
-        <footer class="mastfoot mt-auto">
-            <div class="inner">
-                <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">mdo</a>.</p>
-            </div>
-        </footer>
+        <div style="text-align: start; padding: 0; max-width: 100%" class="container">
+            <footer class="">
+                <div class="row">
+                    <div class="col mb-3 text-center">
+                        <form style="background: #1d1f2e; padding: 80px 0" class="text-white">
+                            <h5>Nhập Email của bạn</h5>
+                            <p>Để nhận các thông tin mới nhất của chúng tôi</p>
+                            <div style="max-width: 400px; width: 100%" class="d-flex flex-column flex-sm-row gap-2 mx-auto">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2023 Lập trình ASP.NET, Nhóm 2. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex gap-3 px-3">
+                        <li class="">
+                            <a class="text-muted" href="https://github.com/nhimc9x/nhom2_qlttsv">
+                                <i class="fa-brands fa-square-github fs-2"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="text-muted" href="https://www.facebook.com/">
+                                <i class="fa-brands fa-square-facebook fs-2"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a class="text-muted" href="https://www.youtube.com/">
+                                <i class="fa-brands fa-square-youtube fs-2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
