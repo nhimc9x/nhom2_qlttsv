@@ -164,3 +164,7 @@ main {
     height: 300px;
     width: 100%;
 }
+
+#ct-form-body {
+    background: #2980b9;
+}
