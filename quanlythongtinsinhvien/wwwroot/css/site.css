@@ -1,27 +1,29 @@
 html {
-  font-size: 14px;
-  scroll-behavior: smooth;
+    font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
 .ct-container {
-    max-width: 1400px;
+    max-width: 1536px;
     width: 100%;
     margin: 0 auto;
 }
+
 header.default-layout {
     padding: 8px 24px;
     position: sticky;
@@ -29,30 +31,38 @@ header.default-layout {
     background-color: rgb(255 255 255 / 75%);
     backdrop-filter: blur(6px);
 }
+
 .default-layout nav a {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
-.default-layout nav a:hover {
-    background: #0d6efd;
-    color: white !important;
-}
-.default-layout nav a.ct-active {
-    color: #198754;
-}
+
+    .default-layout nav a:hover {
+        background: #0d6efd;
+        color: white !important;
+    }
+
+    .default-layout nav a.ct-active {
+        color: #198754;
+    }
+
 main {
     background: #ecf0f1;
     /*padding: 40px 0;*/
 }
+
 .text-asbe {
     color: #7f8c8d;
 }
+
 .ct-content {
     padding: 16px 8px;
 }
+
 .ad-tbody tr td {
     line-height: 38px;
 }
+
 .box-form .row {
     margin-bottom: 12px;
 }
@@ -69,6 +79,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 .ct-modal {
     width: 400px;
     background: #fff;
@@ -76,60 +87,73 @@ main {
     overflow: hidden;
     animation: showModal ease-in-out .3s;
 }
+
 .ct-modal-text {
     text-align: center;
     padding: 28px;
 }
+
 .ct-modal-btn {
     display: flex;
     text-align: center;
     border-top: 1px solid #dfe6e9;
 }
-.ct-modal-btn a {
-    flex-basis: 50%;
-    padding: 12px 0;
-    transition: linear .3s;
-    cursor: pointer;
-}
-    .ct-modal-btn a:hover {
-        background: #ecf0f1;
+
+    .ct-modal-btn a {
+        flex-basis: 50%;
+        padding: 12px 0;
+        transition: linear .3s;
+        cursor: pointer;
     }
-.ct-modal-btn a:first-child {
-    border-right: 1px solid #dfe6e9;
-}
+
+        .ct-modal-btn a:hover {
+            background: #ecf0f1;
+        }
+
+        .ct-modal-btn a:first-child {
+            border-right: 1px solid #dfe6e9;
+        }
+
 @keyframes showModal {
     from {
         transform: scale(0.6);
         opacity: .5;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
     }
 }
+
+.ct-box-cele {
+    box-shadow: 1px 1px 25px #0000002b;
+}
+
 .ct-header-wall {
     background: url('../blue-pattern.jpg') no-repeat center;
     background-size: cover;
     width: 100%;
     height: 420px;
-    
 }
+
 .ct-avatar {
     height: 120px;
     width: 120px;
-    background: url('../avatar.jpg') no-repeat center top;
+    background: url('../Picture2.jpg') no-repeat center top;
     background-size: cover;
     border-radius: 50%;
     border: 1px solid rgba(45, 52, 54, 0.2);
     margin: 0 auto;
 }
+
 .ct-notyfi {
     position: fixed;
     bottom: 10px;
     left: 20px;
     gap: 16px;
     z-index: 99;
-    animation: showNoty ease-in-out 4s forwards ;
+    animation: showNoty ease-in-out 4s forwards;
 }
 
 @keyframes showNoty {
@@ -147,6 +171,7 @@ main {
 #ct-contact-id .ic-ping:hover i {
     animation: ICping linear .2s infinite;
 }
+
 @keyframes ICping {
     from {
         transform: rotate(15deg);
@@ -157,8 +182,19 @@ main {
     }
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-18%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
 .ct-footer-wall {
-    margin-top: 60px;
     background: url('../ftban.jpg') bottom center no-repeat;
     background-size: cover;
     height: 300px;
@@ -166,7 +202,9 @@ main {
 }
 
 #ct-form-body {
-    background: #2980b9;
+    background: url('../bgform.png');
+    background-size: cover;
+    margin-bottom: 0;
 }
 
 
@@ -555,4 +593,3 @@ Vertical Timeline
         transform: translateX(0);
     }
 }
-

@@ -6,7 +6,7 @@ namespace quanlythongtinsinhvien.Controllers
 {
     public class ContentController : Controller
     {
-        QuanlysinhvienContext db_students = new QuanlysinhvienContext();
+        QuanlysinhvienContextTest db_students = new QuanlysinhvienContextTest();
         private readonly ILogger<ContentController> _logger;
 
         public ContentController(ILogger<ContentController> logger)

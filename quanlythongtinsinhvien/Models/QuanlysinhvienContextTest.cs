@@ -4,18 +4,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace quanlythongtinsinhvien.Models;
 
-public partial class QuanlysinhvienContext : DbContext
+public partial class QuanlysinhvienContextTest : DbContext
 {
-    public QuanlysinhvienContext()
+    public QuanlysinhvienContextTest()
     {
     }
 
-    public QuanlysinhvienContext(DbContextOptions<QuanlysinhvienContext> options)
+    public QuanlysinhvienContextTest(DbContextOptions<QuanlysinhvienContextTest> options)
         : base(options)
     {
     }
 
-    public virtual DbSet<Student> Students { get; set; }
+    public virtual DbSet<MajorTest> Majors { get; set; }
+
+    public virtual DbSet<StudentTest> Students { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -25,9 +27,24 @@ public partial class QuanlysinhvienContext : DbContext
     {
         modelBuilder.UseCollation("Vietnamese_100_CI_AS_KS_WS_SC_UTF8");
 
-        modelBuilder.Entity<Student>(entity =>
+        modelBuilder.Entity<MajorTest>(entity =>
         {
-            entity.HasKey(e => e.Masv).HasName("PK__students__7A21767CBEDF8312");
+            entity.HasKey(e => e.Id).HasName("PK__majors__3213E83FBBAD8C00");
+
+            entity.ToTable("majors");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Manganh)
+                .HasMaxLength(20)
+                .HasColumnName("manganh");
+            entity.Property(e => e.Tennganh)
+                .HasMaxLength(255)
+                .HasColumnName("tennganh");
+        });
+
+        modelBuilder.Entity<StudentTest>(entity =>
+        {
+            entity.HasKey(e => e.Masv);
 
             entity.ToTable("students");
 
@@ -39,6 +56,14 @@ public partial class QuanlysinhvienContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("ghichu");
+            entity.Property(e => e.Gioitinh)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .HasColumnName("gioitinh");
+            entity.Property(e => e.Nganhhoc)
+                .HasMaxLength(90)
+                .IsUnicode(false)
+                .HasColumnName("nganhhoc");
             entity.Property(e => e.Ngaysinh)
                 .HasMaxLength(20)
                 .IsUnicode(false)
@@ -55,10 +80,6 @@ public partial class QuanlysinhvienContext : DbContext
                 .HasMaxLength(60)
                 .IsUnicode(false)
                 .HasColumnName("tensv");
-            entity.Property(e => e.Gioitinh)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .HasColumnName("gioitinh");
         });
 
         OnModelCreatingPartial(modelBuilder);
