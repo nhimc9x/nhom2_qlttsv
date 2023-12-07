@@ -1,0 +1,43 @@
+﻿@model quanlythongtinsinhvien.Models.MajorTest
+
+@{
+    ViewData["Title"] = "Thêm ngành học";
+    Layout = "~/Views/Shared/_FormLayout.cshtml";
+}
+
+<div class="row box-form">
+    <div class="col-12">
+        <form method="post" asp-action="Themnganhhoc">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-6 mx-auto">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-address-card"></i>
+                        <label asp-for="Manganh" class="control-label"></label>
+                        <span class="text-danger">(*)</span>
+                    </div>
+                    <input asp-for="Manganh" class="form-control" />
+                    <span asp-validation-for="Manganh" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-6 mx-auto">
+                    <div class="m-1 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        <label asp-for="Tennganh" class="control-label"></label>
+                        <span class="text-danger">(*)</span>
+                        <span asp-validation-for="Tennganh" class="text-danger"></span>
+                    </div>
+                    <input asp-for="Tennganh" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group text-center mt-3">
+                <input style="width: 140px;" type="submit" value="Thêm" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="text-end">
+    <a asp-action="Detailmajors">Trở về</a>
+</div>
+

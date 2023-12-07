@@ -3,7 +3,7 @@
     ViewData["Title"] = "Danh sách sinh viên";
     Layout = "_PageLayout";
 }
-@model List<Student>
+@model List<StudentTest>
 
 <div class="px-5 py-2">
     <div class="card">
@@ -19,6 +19,7 @@
                             <th>Quê quán</th>
                             <th>Ngày sinh</th>
                             <th>Số điện thoại</th>
+                            <th>Khoa</th>
                             <th>Ghi chú</th>
                         </tr>
                     </thead>
@@ -32,6 +33,7 @@
                                 <td>@item.Quequan</td>
                                 <td>@item.Ngaysinh</td>
                                 <td>@item.Sodienthoai</td>
+                                <td>@item.Nganhhoc</td>
                                 <td>@item.Ghichu</td>
                            </tr>
                         }

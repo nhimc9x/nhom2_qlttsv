@@ -1,5 +1,5 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model quanlythongtinsinhvien.Models.Student
+@model quanlythongtinsinhvien.Models.StudentTest
 
 @{
     ViewData["Title"] = "Sửa thông tin sinh viên";
@@ -69,6 +69,15 @@
                 </div>
             </div>
 
+            <div class="form-group my-3">
+                <div class=" m-1 mb-1 d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-book-open"></i>
+                    <label asp-for="Nganhhoc" class="control-label"></label>
+                    <span asp-validation-for="Nganhhoc" class="text-danger"></span>
+                </div>
+                @Html.DropDownListFor(model => model.Nganhhoc, ViewBag.MajorNames as SelectList, "Chọn ngành", new { @class = "form-control" })
+            </div>
+
             <div class="form-group">
                 <div class=" m-1 mb-1 d-flex align-items-center gap-2">
                     <i class="fa-regular fa-clipboard"></i>
@@ -77,9 +86,11 @@
                 </div>
                 <input asp-for="Ghichu" class="form-control" />
             </div>
+
             <div class="form-group text-center mt-3">
                 <input style="width: 140px;" type="submit" value="Sửa" class="btn btn-warning" />
             </div>
+
         </form>
     </div>
 </div>
